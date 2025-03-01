@@ -47,7 +47,7 @@ export default function Starters() {
     {
       title: "Social Media Strategy Masterclass",
       description: "Watch our free masterclass on building a powerful social media presence. Learn proven strategies for content planning, best posting times, and how to stand out in crowded feeds.",
-      image: "/starter1.jpeg"
+      image: "/starter1.jpg"
     },
     {
       title: "Content Creation Secrets",
@@ -57,7 +57,7 @@ export default function Starters() {
     {
       title: "Growth Hacking Workshop",
       description: "Join our free workshop to learn insider techniques for rapid follower growth. We share real case studies, engagement tactics, and proven methods to increase your reach organically.",
-      image: "/starter3.png"
+      image: "/starter3.jpg"
     }
   ];
 

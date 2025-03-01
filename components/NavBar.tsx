@@ -18,17 +18,20 @@ export default function NavBar() {
                         <Image
                             src="/transLogo.png"
                             alt="MetaLoot Logo"
-                            width={32}
-                            height={32}
+                            width={182}
+                            height={182}
                         />
-                        <span className="text-xl font-bold bg-gradient-to-r from-[#FF69B4] to-[#FFD700] bg-clip-text text-transparent">
-                            MetaLoot
-                        </span>
+                        {/* <span className="text-xl font-bold bg-gradient-to-r from-[#FF69B4] to-[#FFD700] bg-clip-text text-transparent">
+                            Mood
+                        </span> */}
                     </Link>
 
                     {/* Navigation Links */}
                     <div className="hidden md:flex items-center space-x-8">
-                        <Link href="about" className="text-gray-600 hover:text-pink-500 transition-colors">
+                        <span className="text-xl font-bold font-serif italic text-black">
+                            "Let's Flourish Together"
+                        </span>
+                        {/* <Link href="about" className="text-gray-600 hover:text-pink-500 transition-colors">
                             About
                         </Link>
                         <Link href="pricing" className="text-gray-600 hover:text-pink-500 transition-colors">
@@ -44,7 +47,7 @@ export default function NavBar() {
                         </Link>
                         <Link href="contact" className="text-gray-600 hover:text-pink-500 transition-colors">
                             Support
-                        </Link>
+                        </Link> */}
                     </div>
 
                     {/* CTA Button */}
