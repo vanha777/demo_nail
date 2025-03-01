@@ -53,7 +53,7 @@ export default function NavBar() {
                     {/* CTA Button */}
                     <div>
                         <Link
-                            href="/dashboard"
+                            href="https://calendly.com/sofiang2407/30min"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="bg-gradient-to-r from-[#FF69B4] to-[#FFD700] text-white px-6 py-2 rounded-lg font-medium hover:opacity-90 transition-opacity shadow-md hover:shadow-lg"

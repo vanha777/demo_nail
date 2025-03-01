@@ -70,9 +70,9 @@ export default function Demo() {
               Share your business stage and needs with us, and book a free consultation to get personalized guidance!
               </p>
               <a 
-              // href="https://hex-gl-clone.vercel.app" 
+              href="https://calendly.com/sofiang2407/30min" 
               target="_blank" className="bg-gradient-to-r from-[#FF69B4] to-[#FFD700] text-white font-bold py-3 px-8 rounded-lg hover:opacity-90 transition-opacity w-fit">
-                Book Now
+                Book A Consultation
               </a>
             </div>
           </div>

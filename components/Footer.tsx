@@ -15,7 +15,7 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-8 relative z-10">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
@@ -30,7 +30,7 @@ export default function Footer() {
           </motion.div>
 
           {/* Quote */}
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -46,7 +46,8 @@ export default function Footer() {
             transition={{ duration: 0.5 }}
           >
             <Link
-              href="/contact"
+              href="https://calendly.com/sofiang2407/30min"
+              target="_blank"
               className="inline-block bg-gradient-to-r from-[#FF69B4] to-[#FFD700] text-white px-6 py-2 rounded-lg font-medium hover:opacity-90 transition-opacity shadow-md hover:shadow-lg"
             >
               Book a Consultation
@@ -55,7 +56,7 @@ export default function Footer() {
         </div>
 
         {/* Copyright - Bottom Center */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }}
