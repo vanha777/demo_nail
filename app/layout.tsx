@@ -10,16 +10,16 @@ config.autoAddCss = false
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'MetaLoot - Blockchain API For Gaming',
-  description: 'Ship faster, cheaper and better with our API.',
+  title: 'SocialPro - Digital Marketing & Social Media Agency',
+  description: 'Transform your brand with our expert social media marketing solutions.',
   openGraph: {
-    title: 'MetaLoot - Blockchain API For Gaming',
-    description: 'Ship faster, cheaper and better with our API.',
-    url: 'https://www.metaloot.dev/',
+    title: 'SocialPro - Digital Marketing & Social Media Agency',
+    description: 'Transform your brand with our expert social media marketing solutions.',
+    url: 'https://www.socialpro.dev/',
     images: [
       {
         url: 'https://tzqzzuafkobkhygtccse.supabase.co/storage/v1/object/public/biz_touch/banner.png',
-        alt: 'MetaLoot blockchain API For Gaming',
+        alt: 'SocialPro Digital Marketing Agency',
       },
     ],
   },
@@ -43,37 +43,37 @@ export default function RootLayout({
     <html lang="en" data-theme="light">
       <Head>
         {/* General Meta Tags */}
-        <meta name="title" content="MetaLoot - Gaming Digital Asset Register" />
-        <meta name="description" content="Ship faster, cheaper and better with our API." />
+        <meta name="title" content="SocialPro - Digital Marketing & Social Media Agency" />
+        <meta name="description" content="Transform your brand with our expert social media marketing solutions." />
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.metaloot.dev/" />
-        <meta property="og:title" content="MetaLoot - Gaming Digital Asset Register" />
-        <meta property="og:description" content="Ship faster, cheaper and better with our API." />
-        <meta property="og:image" content="https://tzqzzuafkobkhygtccse.supabase.co/storage/v1/object/public/metaloot/webmetadata/metaloot.png" />
-        <meta property="og:image:alt" content="A stunning preview of MetaLoot's multiverse gaming platform" />
+        <meta property="og:url" content="https://creativemood.vercel.app" />
+        <meta property="og:title" content="SocialPro - Digital Marketing & Social Media Agency" />
+        <meta property="og:description" content="Transform your brand with our expert social media marketing solutions." />
+        <meta property="og:image" content="https://vbfejmafjqgcfrzxewcd.supabase.co/storage/v1/object/public/general//Black_Simple_Creative_Agency_Logo-removebg-preview.png" />
+        <meta property="og:image:alt" content="SocialPro - Your Partner in Digital Growth" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://www.metaloot.dev/" />
-        <meta name="twitter:title" content="MetaLoot - Gaming Digital Asset Register" />
-        <meta name="twitter:description" content="Ship faster, cheaper and better with our API." />
-        <meta name="twitter:image" content="https://tzqzzuafkobkhygtccse.supabase.co/storage/v1/object/public/metaloot/webmetadata/metaloot.png" />
-        <meta name="twitter:image:alt" content="A stunning preview of MetaLoot's multiverse gaming platform" />
-        <meta name="twitter:site" content="@playmetaloot" />
-        <meta name="twitter:creator" content="@playmetaloot" />
+        <meta name="twitter:url" content="https://creativemood.vercel.app" />
+        <meta name="twitter:title" content="SocialPro - Digital Marketing & Social Media Agency" />
+        <meta name="twitter:description" content="Transform your brand with our expert social media marketing solutions." />
+        <meta name="twitter:image" content="https://vbfejmafjqgcfrzxewcd.supabase.co/storage/v1/object/public/general//Black_Simple_Creative_Agency_Logo-removebg-preview.png" />
+        <meta name="twitter:image:alt" content="SocialPro - Your Partner in Digital Growth" />
+        <meta name="twitter:site" content="@socialpro" />
+        <meta name="twitter:creator" content="@socialpro" />
 
         {/* Telegram */}
-        <meta property="og:title" content="MetaLoot - Gaming Digital Asset Register" />
-        <meta property="og:description" content="Ship faster, cheaper and better with our API." />
-        <meta property="og:image" content="https://tzqzzuafkobkhygtccse.supabase.co/storage/v1/object/public/metaloot/webmetadata/metaloot.png" />
-        <meta property="og:url" content="https://www.metaloot.dev/" />
+        <meta property="og:title" content="SocialPro - Digital Marketing & Social Media Agency" />
+        <meta property="og:description" content="Transform your brand with our expert social media marketing solutions." />
+        <meta property="og:image" content="https://vbfejmafjqgcfrzxewcd.supabase.co/storage/v1/object/public/general//Black_Simple_Creative_Agency_Logo-removebg-preview.png" />
+        <meta property="og:url" content="https://creativemood.vercel.app" />
 
         {/* Discord */}
-        <meta property="og:title" content="MetaLoot - Gaming Digital Asset Register" />
-        <meta property="og:description" content="Ship faster, cheaper and better with our API." />
-        <meta property="og:image" content="https://tzqzzuafkobkhygtccse.supabase.co/storage/v1/object/public/metaloot/webmetadata/metaloot.png" />
+        <meta property="og:title" content="SocialPro - Digital Marketing & Social Media Agency" />
+        <meta property="og:description" content="Transform your brand with our expert social media marketing solutions." />
+        <meta property="og:image" content="https://vbfejmafjqgcfrzxewcd.supabase.co/storage/v1/object/public/general//Black_Simple_Creative_Agency_Logo-removebg-preview.png" />
         <meta property="og:type" content="website" />
       </Head>
       <body suppressHydrationWarning={true} className={inter.className}>
