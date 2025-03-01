@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     // You can also specify different sizes
     apple: [
       { url: '/logo.png' },
-      { url: '/apple.png', sizes: '180x180' }
+      { url: '/apple_pic.png', sizes: '180x180' }
     ],
     shortcut: '/favicon.ico'
   },
@@ -40,7 +40,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" data-theme="metaloot">
+    <html lang="en" data-theme="light">
       <Head>
         {/* General Meta Tags */}
         <meta name="title" content="MetaLoot - Gaming Digital Asset Register" />
