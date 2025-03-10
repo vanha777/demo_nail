@@ -50,7 +50,7 @@ export default function Footer() {
               target="_blank"
               className="inline-block bg-gradient-to-r from-[#FF69B4] to-[#FFD700] text-white px-6 py-2 rounded-lg font-medium hover:opacity-90 transition-opacity shadow-md hover:shadow-lg"
             >
-              Book a Consultation
+              Let’s Chat
             </Link>
           </motion.div>
         </div>

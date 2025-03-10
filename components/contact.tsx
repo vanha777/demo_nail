@@ -1,7 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FiMail, FiPhone, FiMapPin, FiSend, FiX, FiGithub, FiLinkedin } from 'react-icons/fi';
+import { FiMail, FiPhone, FiMapPin, FiSend, FiInstagram, FiFacebook } from 'react-icons/fi';
+import { SiTiktok } from 'react-icons/si';
 import { useState, useRef, useEffect } from 'react';
 import processCommand from '@/app/ultilities/mod';
 
@@ -26,11 +27,26 @@ const Contact = () => {
   };
 
   const socialLinks = [
+    // {
+    //   icon: <FiX className="h-5 w-5" />,
+    //   name: 'Twitter',
+    //   url: 'https://x.com/patricksaturnor'
+    // },
     {
-      icon: <FiX className="h-5 w-5" />,
-      name: 'Twitter',
-      url: 'https://x.com/patricksaturnor'
+      icon: <FiInstagram className="h-5 w-5" />,
+      name: 'Instagram',
+      url: 'https://www.instagram.com/sofia.socialbae'
     },
+    {
+      icon: <FiFacebook className="h-5 w-5" />,
+      name: 'Facebook',
+      url: 'https://www.facebook.com/sofiang2407'
+    },
+    {
+      icon: <SiTiktok className="h-5 w-5" />,
+      name: 'TikTok',
+      url: 'https://www.tiktok.com/@sofia.bossbae'
+    }
     // {
     //   icon: <FiGithub className="h-5 w-5" />,
     //   name: 'GitHub',
@@ -96,9 +112,9 @@ const Contact = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <span className="inline-block py-1 px-3 rounded-full bg-white/10 text-white text-sm font-medium mb-4">Contact Us</span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-[#FF69B4] to-[#FFD700] bg-clip-text text-transparent">Ready for More Clients? Let’s Get Started!</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-[#FF69B4] to-[#FFD700] bg-clip-text text-transparent">Ready for More Clients? Let's Get Started!</h2>
           <p className="text-lg text-gray-200">
-            Let’s Skyrocket Your Success—Grab a Free Strategy Session!
+            Let's Skyrocket Your Success—Grab a Free Strategy Session!
           </p>
         </div>
 
@@ -161,8 +177,8 @@ const Contact = () => {
               className="mt-10 bg-gradient-to-r from-[#FF69B4] to-[#FFD700] p-6 rounded-lg text-white"
               variants={itemVariants}
             >
-              <h4 className="font-bold text-lg mb-3">Let’s Chat!</h4>
-              <p className="mb-4 text-white/90">Want More Clients? Let’s Make It Happen – Schedule a Call Today.</p>
+              <h4 className="font-bold text-lg mb-3">Let's Chat!</h4>
+              <p className="mb-4 text-white/90">Want More Clients? Let's Make It Happen – Schedule a Call Today.</p>
               <a
                 href="https://calendly.com/sofiang2407/30min"
                 className="inline-flex items-center bg-white text-[#5B21B6] font-medium px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors"
