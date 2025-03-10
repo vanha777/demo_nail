@@ -124,19 +124,9 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-white font-medium">Email</h4>
-                  <a href="mailto:devsaturnlabs@gmail.com" className="text-gray-300 hover:text-[#FF69B4] transition-colors">devsaturnlabs@gmail.com</a>
+                  <a href="mailto:sofiang2407@gmail.com" className="text-gray-300 hover:text-[#FF69B4] transition-colors">sofiang2407@gmail.com</a>
                 </div>
               </motion.div>
-
-              {/* <motion.div className="flex items-start space-x-4" variants={itemVariants}>
-                <div className="bg-white p-3 rounded-full text-primary">
-                  <FiPhone className="h-6 w-6" />
-                </div>
-                <div>
-                  <h4 className="text-gray-900 font-medium">Phone</h4>
-                  <a href="tel:+1234567890" className="text-gray-600 hover:text-primary transition-colors">+1 (234) 567-890</a>
-                </div>
-              </motion.div> */}
 
               <motion.div className="flex items-start space-x-4" variants={itemVariants}>
                 <div className="bg-white/10 p-3 rounded-full text-white">
@@ -174,7 +164,7 @@ const Contact = () => {
               <h4 className="font-bold text-lg mb-3">Let’s Chat!</h4>
               <p className="mb-4 text-white/90">Want More Clients? Let’s Make It Happen – Schedule a Call Today.</p>
               <a
-                href="https://calendly.com/vanha101096/30min"
+                href="https://calendly.com/sofiang2407/30min"
                 className="inline-flex items-center bg-white text-[#5B21B6] font-medium px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors"
               >
                 Talk 2 me
