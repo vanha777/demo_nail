@@ -71,8 +71,7 @@ export default function Hero() {
               </span>
             </h1>
             <p className="text-gray-600 text-lg mb-8">
-              Elevate your brand with our cutting-edge social media management solutions.
-              We help businesses thrive in the digital landscape.
+            We Help Nail Salons & Beauty Businesses Grow with Digital Marketing That Works.
             </p>
           </motion.div>
 

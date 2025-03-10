@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { FaRocket, FaPiggyBank, FaChartLine, FaShieldAlt, FaCode, FaBolt } from 'react-icons/fa'
+import { FaRocket, FaPiggyBank, FaChartLine, FaShieldAlt, FaCode, FaBolt, FaLayerGroup, FaPalette, FaCalendarCheck, FaLaptopCode, FaAdversal, FaInstagram } from 'react-icons/fa'
 import { useState, useEffect } from 'react'
 
 export default function Statements() {
@@ -42,36 +42,37 @@ export default function Statements() {
     }
   }
 
+
   const cards = [
     {
-      title: "Streamline Social Management",
-      description: "Our comprehensive dashboard lets you create, schedule, and manage content across all social platforms from one place. Focus on strategy, not juggling multiple apps.",
-      icon: FaRocket,
+      title: "Social Media Management",
+      description: "We create, schedule, and manage posts to keep your business active online—without you lifting a finger.",
+      icon: FaInstagram, // Social media icon
     },
     {
-      title: "Maximize ROI",
-      description: "Our data-driven approach helps optimize your social media spend, delivering up to 70% better engagement rates and higher conversion rates for your marketing budget.",
-      icon: FaPiggyBank,
+      title: "Facebook & Google Ads",
+      description: "We design high-converting ads that attract local clients and increase bookings.",
+      icon: FaAdversal, // Advertising icon
     },
     {
-      title: "Boost Engagement",
-      description: "Leverage our AI-powered content strategies and timing optimization to consistently reach and engage your target audience across all social platforms.",
-      icon: FaChartLine,
+      title: "Website Creation & Optimization",
+      description: "Get a stunning, mobile-friendly website that turns visitors into customers.",
+      icon: FaLaptopCode, // Website/coding icon
     },
     {
-      title: "Stay Ahead of Trends",
-      description: "Social media moves fast. Our team keeps you at the forefront of emerging platforms, algorithm changes, and content trends to maintain your competitive edge.",
-      icon: FaShieldAlt,
+      title: "Booking System Setup",
+      description: "We help integrate online booking tools so clients can schedule appointments easily.",
+      icon: FaCalendarCheck, // Calendar/booking icon
     },
     {
-      title: "Expert Strategy & Execution",
-      description: "Skip the costly trial and error of social media marketing. Our experienced team crafts and executes winning strategies tailored to your business goals.",
-      icon: FaCode,
+      title: "Branding & Content Creation",
+      description: "From logos to graphics and photos, we help you stand out with a unique brand identity.",
+      icon: FaPalette, // Design/creative icon
     },
     {
       title: "Seamless Integration",
       description: "From content creation to analytics, we integrate smoothly with your existing marketing efforts. Start seeing results in days, not months.",
-      icon: FaBolt,
+      icon: FaLayerGroup, // Integration/layers icon
     },
   ];
   

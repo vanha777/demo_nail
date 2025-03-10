@@ -29,7 +29,7 @@ export default function NavBar() {
                     {/* Navigation Links */}
                     <div className="hidden md:flex items-center space-x-8">
                         <span className="text-xl font-bold font-serif italic text-black">
-                            "Let's Flourish Together"
+                            "Let’s take your business to the next level."
                         </span>
                         {/* <Link href="about" className="text-gray-600 hover:text-pink-500 transition-colors">
                             About

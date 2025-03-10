@@ -36,7 +36,7 @@ export default function Footer() {
             transition={{ duration: 0.5 }}
             className="text-xl font-serif italic text-gray-800 hidden md:block"
           >
-            "Let's Flourish Together"
+            "Let’s take your business to the next level."
           </motion.p>
 
           {/* CTA Button */}
