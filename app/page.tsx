@@ -7,6 +7,8 @@ import Demo from '@/components/Demo'
 import NavBar from '@/components/NavBar'
 import Starters from '@/components/Starters'
 import Footer from '@/components/Footer'
+import Testimonials from '@/components/Testimonials'
+import Contact from '@/components/contact'
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false)
 
@@ -28,6 +30,8 @@ export default function Home() {
           <Hero2 />
           <Demo />
           <Satements />
+          <Contact />
+          <Testimonials />
           <Starters />
         </div>
         <Footer />

@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { FaRocket, FaPiggyBank, FaChartLine, FaShieldAlt, FaCode, FaBolt, FaLayerGroup, FaPalette, FaCalendarCheck, FaLaptopCode, FaAdversal, FaInstagram } from 'react-icons/fa'
+import { FaAdversal, FaCalendarCheck, FaInstagram, FaLaptopCode, FaPalette, FaSearchLocation } from 'react-icons/fa'
 import { useState, useEffect } from 'react'
 
 export default function Statements() {
@@ -11,7 +11,7 @@ export default function Statements() {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768)
     }
-    
+
     checkMobile()
     window.addEventListener('resize', checkMobile)
     return () => window.removeEventListener('resize', checkMobile)
@@ -42,26 +42,25 @@ export default function Statements() {
     }
   }
 
-
   const cards = [
     {
       title: "Social Media Management",
-      description: "We create, schedule, and manage posts to keep your business active online—without you lifting a finger.",
+      description: "We create, schedule, and manage engaging posts so your salon stays active online—without you lifting a finger.",
       icon: FaInstagram, // Social media icon
     },
     {
       title: "Facebook & Google Ads",
-      description: "We design high-converting ads that attract local clients and increase bookings.",
+      description: "We design high-converting ads that attract local clients and fill your appointment book.",
       icon: FaAdversal, // Advertising icon
     },
     {
       title: "Website Creation & Optimization",
-      description: "Get a stunning, mobile-friendly website that turns visitors into customers.",
+      description: "Get a stunning, mobile-friendly website that turns visitors into loyal customers.",
       icon: FaLaptopCode, // Website/coding icon
     },
     {
-      title: "Booking System Setup",
-      description: "We help integrate online booking tools so clients can schedule appointments easily.",
+      title: "Online Booking System Setup",
+      description: "Make it easy for clients to book 24/7 with a seamless online scheduling system.",
       icon: FaCalendarCheck, // Calendar/booking icon
     },
     {
@@ -70,12 +69,12 @@ export default function Statements() {
       icon: FaPalette, // Design/creative icon
     },
     {
-      title: "Seamless Integration",
-      description: "From content creation to analytics, we integrate smoothly with your existing marketing efforts. Start seeing results in days, not months.",
-      icon: FaLayerGroup, // Integration/layers icon
+      title: "SEO & Local Search Optimization",
+      description: "Make sure your salon shows up when people search on Google & Maps! We optimize your online presence so more customers can find & book you instantly.",
+      icon: FaSearchLocation, // Changed to a search location icon which better represents SEO & local search
     },
   ];
-  
+
 
   return (
     <section className="bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 relative overflow-hidden flex items-center justify-center px-2 md:px-4 text-gray-800 py-24">
@@ -101,7 +100,7 @@ export default function Statements() {
                 repeat: Infinity,
                 delay: i * 0.2,
               }}
-              style={{ 
+              style={{
                 top: `${(i + 1) * 5}%`,
                 transform: 'rotate(-45deg)',
                 transformOrigin: 'center'
@@ -120,7 +119,7 @@ export default function Statements() {
       >
         <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-center mb-32 mt-32">
           <span className="text-gray-800">WE ARE HERE</span>
-          <br className="mb-4"/>
+          <br className="mb-4" />
           <span className="bg-gradient-to-r from-[#FF69B4] to-[#FFD700] bg-clip-text text-transparent">
             FOR YOUR BUSINESS
           </span>

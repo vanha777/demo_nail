@@ -11,7 +11,7 @@ export default function Demo() {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768)
     }
-    
+
     checkMobile()
     window.addEventListener('resize', checkMobile)
     return () => window.removeEventListener('resize', checkMobile)
@@ -35,10 +35,10 @@ export default function Demo() {
         <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-[#7928CA] rounded-full filter blur-[120px] opacity-40" />
         <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[#FF0080] rounded-full filter blur-[120px] opacity-40" />
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[#0070F3] rounded-full filter blur-[150px] opacity-30" />
-        
+
         {/* Gradient mesh */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#2E1065]/90 via-[#4C1D95]/80 to-[#5B21B6]/70" />
-        
+
         {/* Subtle grid overlay */}
         {/* <div className="absolute inset-0 bg-[url('/grid.png')] opacity-40 bg-repeat bg-center" 
              style={{ backgroundSize: '50px 50px' }} /> */}
@@ -61,18 +61,18 @@ export default function Demo() {
                 className="object-cover"
               />
             </div>
-            
+
             <div className="md:w-1/2 p-8 flex flex-col justify-center">
               <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-[#FF69B4] to-[#FFD700] bg-clip-text text-transparent">
-                Free Consultation
+                Let’s Chat!
               </h2>
               <p className="text-gray-200 mb-6 text-lg leading-relaxed">
-              Share your business stage and needs with us, and book a free consultation to get personalized guidance!
+                Want More Clients? Let’s Make It Happen – Schedule a Call Today.
               </p>
-              <a 
-              href="https://calendly.com/sofiang2407/30min" 
-              target="_blank" className="bg-gradient-to-r from-[#FF69B4] to-[#FFD700] text-white font-bold py-3 px-8 rounded-lg hover:opacity-90 transition-opacity w-fit">
-                Book A Consultation
+              <a
+                href="https://calendly.com/sofiang2407/30min"
+                target="_blank" className="bg-gradient-to-r from-[#FF69B4] to-[#FFD700] text-white font-bold py-3 px-8 rounded-lg hover:opacity-90 transition-opacity w-fit">
+                Let’s Chat!
               </a>
             </div>
           </div>
