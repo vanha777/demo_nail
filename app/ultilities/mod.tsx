@@ -11,7 +11,7 @@ export default async function processCommand(transcript: string): Promise<string
         const model = new ChatOpenAI({
             temperature: 0,
             modelName: 'gpt-4', // Use 'gpt-4' or 'gpt-3.5-turbo' if 'gpt-4o-mini' is not a valid model name
-            openAIApiKey: process.env.NEXT_OPENAI_API_KEY,
+            openAIApiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY,
         });
 
         // Create a prompt template with a placeholder for the transcript
