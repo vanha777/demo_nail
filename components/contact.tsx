@@ -45,7 +45,7 @@ const Contact = () => {
 
   // Add new state for chat functionality
   const [messages, setMessages] = useState([
-    { text: "Hi there! How can I help you today?", isBot: true }
+    { text: "Hi there! I'm an AI assistant. Will provide you with a free strategy session. Please provide your business name and email to begin.", isBot: true }
   ]);
   const [inputMessage, setInputMessage] = useState("");
   const [isTyping, setIsTyping] = useState(false);
@@ -89,16 +89,16 @@ const Contact = () => {
         <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-[#7928CA] rounded-full filter blur-[120px] opacity-40" />
         <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[#FF0080] rounded-full filter blur-[120px] opacity-40" />
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[#0070F3] rounded-full filter blur-[150px] opacity-30" />
-        
+
         <div className="absolute inset-0 bg-gradient-to-br from-[#2E1065]/90 via-[#4C1D95]/80 to-[#5B21B6]/70" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <span className="inline-block py-1 px-3 rounded-full bg-white/10 text-white text-sm font-medium mb-4">Contact Us</span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-[#FF69B4] to-[#FFD700] bg-clip-text text-transparent">Let's Build Something Amazing Together</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-[#FF69B4] to-[#FFD700] bg-clip-text text-transparent">Ready for More Clients? Let’s Get Started!</h2>
           <p className="text-lg text-gray-200">
-            Ready to transform your ideas into reality? Get in touch with us to discuss your project.
+            Let’s Skyrocket Your Success—Grab a Free Strategy Session!
           </p>
         </div>
 
@@ -171,13 +171,13 @@ const Contact = () => {
               className="mt-10 bg-gradient-to-r from-[#FF69B4] to-[#FFD700] p-6 rounded-lg text-white"
               variants={itemVariants}
             >
-              <h4 className="font-bold text-lg mb-3">Schedule a Discovery Call</h4>
-              <p className="mb-4 text-white/90">Book a free 30-minute call to discuss your project requirements.</p>
+              <h4 className="font-bold text-lg mb-3">Let’s Chat!</h4>
+              <p className="mb-4 text-white/90">Want More Clients? Let’s Make It Happen – Schedule a Call Today.</p>
               <a
                 href="https://calendly.com/vanha101096/30min"
                 className="inline-flex items-center bg-white text-[#5B21B6] font-medium px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors"
               >
-                Book a Call
+                Talk 2 me
               </a>
             </motion.div>
           </motion.div>
@@ -212,8 +212,8 @@ const Contact = () => {
                   >
                     <div
                       className={`max-w-[80%] rounded-2xl px-4 py-3 ${msg.isBot
-                          ? 'bg-white/10 text-white rounded-tl-none'
-                          : 'bg-gradient-to-r from-[#FF69B4] to-[#FFD700] text-white rounded-tr-none'
+                        ? 'bg-white/10 text-white rounded-tl-none'
+                        : 'bg-gradient-to-r from-[#FF69B4] to-[#FFD700] text-white rounded-tr-none'
                         }`}
                     >
                       {msg.text}

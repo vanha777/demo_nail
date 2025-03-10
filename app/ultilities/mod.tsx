@@ -16,7 +16,7 @@ export default async function processCommand(transcript: string): Promise<string
 
         // Create a prompt template with a placeholder for the transcript
         const promptTemplate = new PromptTemplate({
-            template: `You are an expert software agency consultant. 
+            template: `You are an expert social media marketing consultant. 
             When providing advice, format your response for a chat interface with clear line breaks, bullet points, and emphasis where needed.
             
             Input: {text}
