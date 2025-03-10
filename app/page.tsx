@@ -31,8 +31,8 @@ export default function Home() {
           <Demo />
           <Satements />
           <Contact />
-          <Testimonials />
-          <Starters />
+          {/* <Testimonials />
+          <Starters /> */}
         </div>
         <Footer />
       </main>

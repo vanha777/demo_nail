@@ -64,15 +64,15 @@ export default function Demo() {
 
             <div className="md:w-1/2 p-8 flex flex-col justify-center">
               <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-[#FF69B4] to-[#FFD700] bg-clip-text text-transparent">
-                Let’s Chat!
+                Want More Clients? Let’s Make It Happen
               </h2>
               <p className="text-gray-200 mb-6 text-lg leading-relaxed">
-                Want More Clients? Let’s Make It Happen – Schedule a Call Today.
+                Schedule a Call Today.
               </p>
               <a
                 href="https://calendly.com/sofiang2407/30min"
                 target="_blank" className="bg-gradient-to-r from-[#FF69B4] to-[#FFD700] text-white font-bold py-3 px-8 rounded-lg hover:opacity-90 transition-opacity w-fit">
-                Let’s Chat!
+                Let’s Chat
               </a>
             </div>
           </div>
