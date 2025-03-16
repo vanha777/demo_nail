@@ -84,7 +84,7 @@ export default function Hero() {
           >
             <div >
               <img
-                src={isMobile ? "/hero.png" : "/hero.png"}
+                src={isMobile ? "/hero0.png" : "/hero0.png"}
                 alt="Hero Image"
                 className="w-full h-full object-cover"
               />
