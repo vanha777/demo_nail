@@ -20,22 +20,16 @@ export default function Hero() {
   }, [isMobile])
 
   return (
-    <section className="bg-gradient-to-r from-[#FF69B4] to-[#FFD700] relative overflow-hidden min-h-screen flex items-center px-4 md:px-8">
-      {/* Animated gradient background */}
+    <section className="bg-gray-100 relative overflow-hidden min-h-screen flex items-center px-4 md:px-8">
+      {/* Subtle diagonal lines pattern */}
       <div className="absolute inset-0">
-        {/* Glowing orbs */}
-        <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-violet-600 rounded-full filter blur-[120px] opacity-20" />
-        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-fuchsia-600 rounded-full filter blur-[120px] opacity-20" />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-indigo-600 rounded-full filter blur-[150px] opacity-20" />
-
-        {/* Diagonal lines pattern */}
         <div className="absolute inset-0">
           {[...Array(20)].map((_, i) => (
             <motion.div
               key={`h-${i}`}
               initial={{ opacity: 0.1 }}
               animate={{
-                opacity: [0.1, 0.2, 0.1],
+                opacity: [0.03, 0.05, 0.03],
                 height: ['1px', '2px', '1px']
               }}
               transition={{
@@ -48,14 +42,14 @@ export default function Hero() {
                 transform: 'rotate(-45deg)',
                 transformOrigin: 'center'
               }}
-              className="absolute w-full bg-violet-500/30"
+              className="absolute w-full bg-gray-400/20"
             />
           ))}
         </div>
       </div>
 
       <div className="container mx-auto relative z-10">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-12">
           {/* Left side content */}
           <motion.div 
             className="w-full md:w-1/2"
@@ -64,13 +58,15 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6">
-              <span className="text-white">TRANSFORM YOUR</span>
+              <span className="bg-gradient-to-r from-[#FF69B4] to-[#FFD700] bg-clip-text text-transparent">
+                TRANSFORM YOUR
+              </span>
               <br />
-              <span className="text-white">
+              <span className="bg-gradient-to-r from-[#FF69B4] to-[#FFD700] bg-clip-text text-transparent">
                 SOCIAL PRESENCE
               </span>
             </h1>
-            <p className="text-white text-lg mb-8">
+            <p className="text-gray-600 text-lg md:text-xl mb-8 leading-relaxed">
               We Help Nail Salons & Beauty Businesses Grow with Digital Marketing That Works.
             </p>
           </motion.div>
@@ -82,11 +78,36 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div >
+            {/* Gradient background box */}
+            <div className="absolute inset-4 -rotate-6 rounded-3xl bg-gradient-to-br from-pink-300 via-yellow-200 to-pink-200 transform hover:rotate-0 transition-transform duration-300">
+              {/* Sparkles */}
+              {[...Array(8)].map((_, i) => (
+                <motion.div
+                  key={`sparkle-${i}`}
+                  className="absolute w-2 h-2 bg-white rounded-full"
+                  style={{
+                    left: `${10 + 80 * Math.random()}%`,
+                    top: `${10 + 80 * Math.random()}%`,
+                  }}
+                  animate={{
+                    scale: [0, 1, 0],
+                    opacity: [0, 1, 0],
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    delay: i * 0.2,
+                  }}
+                />
+              ))}
+            </div>
+            
+            {/* Image container */}
+            <div className="relative p-6">
               <img
-                src={isMobile ? "/hero.png" : "/hero.png"}
+                src={isMobile ? "/hero3ne.png" : "/hero3ne.png"}
                 alt="Hero Image"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover rounded-2xl"
               />
             </div>
           </motion.div>

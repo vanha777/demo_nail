@@ -44,47 +44,27 @@ export default function Statements() {
 
   const cards = [
     {
-      title: "Social Media Management",
-      description: "We create, schedule, and manage engaging posts so your salon stays active online—without you lifting a finger.",
-      icon: FaInstagram, // Social media icon
+      title: "AI-Powered Solutions",
+      description: "Leverage cutting-edge artificial intelligence to automate tasks, analyze data, and make smarter business decisions.",
+      icon: FaLaptopCode,
     },
     {
-      title: "Facebook & Google Ads",
-      description: "We design high-converting ads that attract local clients and fill your appointment book.",
-      icon: FaAdversal, // Advertising icon
+      title: "Real-Time Analytics",
+      description: "Get instant insights into your business performance with comprehensive analytics and beautiful visualizations.",
+      icon: FaSearchLocation,
     },
     {
-      title: "Website Creation & Optimization",
-      description: "Get a stunning, mobile-friendly website that turns visitors into loyal customers.",
-      icon: FaLaptopCode, // Website/coding icon
-    },
-    {
-      title: "Online Booking System Setup",
-      description: "Make it easy for clients to book 24/7 with a seamless online scheduling system.",
-      icon: FaCalendarCheck, // Calendar/booking icon
-    },
-    {
-      title: "Branding & Content Creation",
-      description: "From logos to graphics and photos, we help you stand out with a unique brand identity.",
-      icon: FaPalette, // Design/creative icon
-    },
-    {
-      title: "SEO & Local Search Optimization",
-      description: "Make sure your salon shows up when people search on Google & Maps! We optimize your online presence so more customers can find & book you instantly.",
-      icon: FaSearchLocation, // Changed to a search location icon which better represents SEO & local search
+      title: "Smart Automation",
+      description: "Streamline your workflow with intelligent automation tools that save time and reduce manual tasks.",
+      icon: FaCalendarCheck,
     },
   ];
 
 
   return (
-    <section className="bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 relative overflow-hidden flex items-center justify-center px-2 md:px-4 text-gray-800 py-24">
+    <section className="bg-white relative overflow-hidden flex items-center justify-center px-2 md:px-4 text-gray-800 py-24">
       {/* Animated gradient background */}
       <div className="absolute inset-0">
-        {/* Glowing orbs */}
-        <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-violet-400 rounded-full filter blur-[120px] opacity-20" />
-        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-fuchsia-400 rounded-full filter blur-[120px] opacity-20" />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-indigo-400 rounded-full filter blur-[150px] opacity-20" />
-
         {/* Diagonal lines pattern */}
         <div className="absolute inset-0">
           {[...Array(20)].map((_, i) => (
@@ -118,10 +98,18 @@ export default function Statements() {
         animate="visible"
       >
         <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-center mb-32 mt-32">
-          <span className="text-gray-800">WE ARE HERE</span>
-          <br className="mb-4" />
-          <span className="bg-gradient-to-r from-[#FF69B4] to-[#FFD700] bg-clip-text text-transparent">
-            FOR YOUR BUSINESS
+          <span className="bg-gradient-to-r from-[#FF69B4] to-[#FFD700] bg-clip-text text-transparent relative">
+            AMAZING FEATURES
+            <motion.div 
+              className="absolute left-1/2 -bottom-4 h-0.5 w-24 bg-black rounded-full -translate-x-1/2"
+              initial={{ width: 0, opacity: 0 }}
+              animate={{ width: 96, opacity: 1 }}
+              transition={{ 
+                duration: 0.8, 
+                ease: "easeOut",
+                delay: 0.2
+              }}
+            />
           </span>
         </h1>
         <div className={`grid ${isMobile ? 'grid-cols-1 gap-6' : 'grid-cols-3 gap-8'} w-full max-w-6xl mx-auto`}>
@@ -129,14 +117,39 @@ export default function Statements() {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="flex flex-col gap-3 bg-white/80 backdrop-blur-lg rounded-xl p-6 border border-pink-200 hover:border-pink-300 transition-colors shadow-lg hover:shadow-xl"
+              className="flex flex-col gap-8 bg-white/80 backdrop-blur-lg rounded-xl p-10 border-2 border-pink-200 hover:border-pink-300 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1"
             >
-              <div className="flex justify-center items-center w-24 h-24 mx-auto rounded-full bg-gradient-to-br from-pink-100 to-yellow-100">
-                <card.icon className="w-12 h-12 text-pink-500" />
+              <div className="relative pt-4">
+                {/* Sparkles */}
+                {[...Array(8)].map((_, i) => (
+                  <motion.div
+                    key={`sparkle-${i}`}
+                    className="absolute w-1.5 h-1.5 bg-gradient-to-r from-pink-300 to-yellow-300 rounded-full"
+                    style={{
+                      left: `${50 + 40 * Math.cos(i * Math.PI / 4)}%`,
+                      top: `${50 + 40 * Math.sin(i * Math.PI / 4)}%`,
+                    }}
+                    animate={{
+                      scale: [0, 1, 0],
+                      opacity: [0, 1, 0],
+                    }}
+                    transition={{
+                      duration: 1.5,
+                      repeat: Infinity,
+                      delay: i * 0.15,
+                      ease: "easeInOut"
+                    }}
+                  />
+                ))}
+
+                {/* Icon container */}
+                <div className="flex justify-center items-center w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-pink-100 to-yellow-100 shadow-inner hover:scale-105 transition-transform duration-300">
+                  <card.icon className="w-16 h-16 text-pink-500 drop-shadow-md" />
+                </div>
               </div>
 
-              <div className="text-left">
-                <h2 className="text-xl md:text-2xl font-bold mb-2 bg-gradient-to-r from-[#FF69B4] to-[#FFD700] bg-clip-text text-transparent">
+              <div className="text-left px-2 pb-4">
+                <h2 className="text-2xl md:text-3xl font-bold mb-4 bg-gradient-to-r from-[#FF69B4] to-[#FFD700] bg-clip-text text-transparent">
                   {card.title}
                 </h2>
                 <p className="text-sm md:text-base text-gray-600 leading-relaxed">

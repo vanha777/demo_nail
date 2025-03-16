@@ -9,6 +9,7 @@ import Starters from '@/components/Starters'
 import Footer from '@/components/Footer'
 import Testimonials from '@/components/Testimonials'
 import Contact from '@/components/contact'
+import Hero3 from '@/components/Hero3'
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false)
 
@@ -28,11 +29,12 @@ export default function Home() {
         <NavBar />
         <div className="flex flex-col">
           <Hero2 />
-          <Demo />
+          {/* <Demo /> */}
           <Satements />
+          <Hero3 />
           <Contact />
-          {/* <Testimonials />
-          <Starters /> */}
+          {/* <Testimonials /> */}
+          {/* <Starters /> */}
         </div>
         <Footer />
       </main>
