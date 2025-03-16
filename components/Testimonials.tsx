@@ -29,22 +29,22 @@ export default function Testimonials() {
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      role: "Salon Owner",
-      image: "/testimonial1.jpg", // Replace with actual image path
-      quote: "Since working with CreativeMood, my salon bookings have increased by 40%. Their social media management and targeted ads completely transformed my business!",
+      name: "Sofia Nguyen",
+      role: "5-Year Loyal Client",
+      image: "/customer1.jpg", // Replace with actual image path
+      quote: "I've been exclusively using Glaze's ageLOC products for 5 years now, and the results are incredible. My weekly manicures combined with their Galvanic Spa treatments have completely transformed my hands - they look 10 years younger! The staff's expertise in recommending the right products for my skin type keeps me coming back.",
     },
     {
-      name: "Michael Chen",
-      role: "Fitness Studio Owner",
-      image: "/testimonial2.jpg", // Replace with actual image path
-      quote: "The website they built for my fitness studio not only looks amazing but converts visitors into members. Their marketing strategy helped me stand out in a competitive market.",
+      name: "Fiano Pham",
+      role: "3-Year VIP Member",
+      image: "/customer2.jpg", // Replace with actual image path
+      quote: "Started with just monthly manicures, but after trying their ageLOC Boost System, I was hooked! Three years later, I'm here every two weeks for nail care and facial treatments. The Enhancer Skin Conditioning Gel has become my holy grail product - it's perfect for Houston's humid weather. The results speak for themselves!",
     },
     {
-      name: "Emma Rodriguez",
-      role: "Boutique Manager",
-      image: "/testimonial3.jpg", // Replace with actual image path
-      quote: "CreativeMood's branding work gave our boutique a fresh, cohesive look across all platforms. Their social media campaigns have directly increased our foot traffic and sales.",
+      name: "Lisa Wong",
+      role: "4-Year Regular Client",
+      image: "/customer3.jpg", // Replace with actual image path
+      quote: "Four years of consistent nail care and Glaze's skincare routine have made such a difference. Their ageLOC Tru Face Essence Ultra combined with regular manicures has kept my hands looking youthful and professional. As someone who tried countless salons before, I can say their expertise in both nail care and anti-aging treatments is unmatched.",
     },
   ]
 
@@ -104,9 +104,21 @@ export default function Testimonials() {
                   transition={{ duration: 0.5 }}
                   className="w-40 h-40 rounded-full overflow-hidden flex-shrink-0 border-4 border-[#FF6B35]/20 shadow-lg"
                 >
-                  <div className="w-full h-full bg-[#FF6B35] flex items-center justify-center text-white text-4xl font-bold">
-                    {testimonials[activeTestimonial].name.charAt(0)}
-                  </div>
+                  <Image 
+                    src={testimonials[activeTestimonial].image}
+                    alt={testimonials[activeTestimonial].name}
+                    width={160}
+                    height={160}
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      // Fallback to initial letter if image fails to load
+                      const target = e.target as HTMLElement;
+                      target.style.display = 'none';
+                      target.parentElement!.innerHTML = `<div class="w-full h-full bg-[#FF6B35] flex items-center justify-center text-white text-4xl font-bold">
+                        ${testimonials[activeTestimonial].name.charAt(0)}
+                      </div>`;
+                    }}
+                  />
                 </motion.div>
 
                 <div className="flex-1">
@@ -162,9 +174,21 @@ export default function Testimonials() {
               className="bg-white rounded-3xl shadow-md p-6"
             >
               <div className="w-20 h-20 mx-auto rounded-full overflow-hidden border-4 border-[#FF6B35]/20 mb-4">
-                <div className="w-full h-full bg-[#FF6B35] flex items-center justify-center text-white text-2xl font-bold">
-                  {testimonials[activeTestimonial].name.charAt(0)}
-                </div>
+                <Image 
+                  src={testimonials[activeTestimonial].image}
+                  alt={testimonials[activeTestimonial].name}
+                  width={80}
+                  height={80}
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    // Fallback to initial letter if image fails to load
+                    const target = e.target as HTMLElement;
+                    target.style.display = 'none';
+                    target.parentElement!.innerHTML = `<div class="w-full h-full bg-[#FF6B35] flex items-center justify-center text-white text-2xl font-bold">
+                      ${testimonials[activeTestimonial].name.charAt(0)}
+                    </div>`;
+                  }}
+                />
               </div>
 
               <p className="text-lg text-black/80 mb-4 text-center">

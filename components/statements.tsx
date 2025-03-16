@@ -126,7 +126,7 @@ export default function Statements() {
               className="w-48 md:w-72 h-auto rounded-[90px]"
               style={{
                 clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-                height: "700px",
+                height: isMobile ? "400px" : "700px",
                 objectFit: "cover",
                 transform: "rotate(-15deg)",
                 transformOrigin: "center"
