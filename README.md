@@ -1,33 +1,34 @@
-# CreativeMood Business Consultants
+# ✨ Glaze - Modern Nail Salon Template
 
-![CreativeMood Logo](https://vbfejmafjqgcfrzxewcd.supabase.co/storage/v1/object/public/general//Black_Simple_Creative_Agency_Logo-removebg-preview.png)
+![Glaze Logo](your-logo-path-here)
 
-## 🚀 Transforming Businesses Through Strategic Excellence
+## 💅 Elevate Your Nail Game
 
-Welcome to CreativeMood Business Consultants, where we transform challenges into opportunities and vision into reality. Our landing page showcases our commitment to delivering exceptional business consulting services.
+Welcome to Glaze, a premium nail salon landing page template that combines style, innovation, and AI-powered customer engagement. Perfect for modern nail salons looking to create an unforgettable digital presence.
 
-### ✨ Key Features
+### 🌟 Standout Features
 
-- **Modern Design** - Sleek, professional interface built with Next.js 13
-- **Responsive Layout** - Seamless experience across all devices
-- **Performance Optimized** - Lightning-fast loading times
-- **SEO Ready** - Built-in metadata optimization
-- **Analytics Integration** - Track visitor engagement with Vercel Analytics
+- **AI Chat Assistant** - 24/7 virtual consultant for bookings and product inquiries
+- **Smart Booking System** - Seamless appointment scheduling
+- **Product Showcase** - Elegant display of premium beauty products
+- **Client Testimonials** - Dynamic, animated review carousel
+- **Mobile-First Design** - Perfect experience across all devices
+- **Knowledge Base Integration** - AI-powered answers about services and products
 
-## 🛠️ Tech Stack
+## 🛠️ Built With
 
 - **Framework:** Next.js 13
 - **Styling:** TailwindCSS
-- **Icons:** Font Awesome
-- **Analytics:** Vercel Analytics
+- **Animations:** Framer Motion
+- **Chat Bot:** AI-powered assistant
+- **Images:** Next/Image optimization
 - **Deployment:** Vercel
-- **Font:** Inter (Google Fonts)
 
-## 🚀 Getting Started
+## 🚀 Quick Start
 
-1. Clone the repository:
+1. Clone the template:
 ```bash
-git clone https://github.com/yourusername/creativemood.git
+git clone https://github.com/yourusername/glaze-nails.git
 ```
 
 2. Install dependencies:
@@ -35,37 +36,46 @@ git clone https://github.com/yourusername/creativemood.git
 npm install
 ```
 
-3. Run the development server:
+3. Run it locally:
 ```bash
 npm run dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) to view the site
+4. Visit [http://localhost:3000](http://localhost:3000)
 
-## 📱 Live Demo
+## ✨ Live Demo
 
-Visit our live site: [CreativeMood Business Consultants](https://creativemood.vercel.app)
+Experience the template: [Glaze Nails](https://glaze-nails.vercel.app)
 
-## 💼 Services We Showcase
+## 💄 Featured Sections
 
-- Strategic Business Planning
-- Financial Advisory
-- Market Analysis
-- Operational Optimization
-- Digital Transformation
-- Leadership Development
+- **Hero Section** - Captivating first impression
+- **Service Showcase** - Premium nail services
+- **Product Gallery** - High-end beauty products
+- **Client Stories** - Animated testimonials
+- **AI Chat Assistant** - Smart customer support
+- **Booking Integration** - Easy appointment scheduling
 
-## 📞 Contact
+## 🤖 AI Assistant Features
 
-For business inquiries or technical support:
-- 📧 Email: contact@creativemood.com
-- 🌐 Website: https://creativemood.vercel.app
-- 📱 Twitter: [@creativemood](https://twitter.com/creativemood)
+- 24/7 availability for client inquiries
+- Smart product recommendations
+- Instant service information
+- Appointment scheduling assistance
+- Knowledge base integration
+- Natural, engaging conversations
+
+## 📱 Contact & Support
+
+Need help customizing your template?
+- 📧 Email: support@glaze-nails.com
+- 🌐 Demo: https://glaze-nails.vercel.app
+- 📱 Instagram: [@glazenails](https://instagram.com/glazenails)
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This template is licensed under the MIT License - see [LICENSE.md](LICENSE.md) for details.
 
 ---
 
-<p align="center">Built with ❤️ by CreativeMood Team</p>
+<p align="center">💅 Created for the modern nail salon experience ✨</p>
