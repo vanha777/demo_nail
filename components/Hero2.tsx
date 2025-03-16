@@ -22,14 +22,14 @@ export default function Hero() {
   return (
     <section className="bg-gradient-to-r from-[#FF69B4] to-[#FFD700] relative overflow-hidden min-h-screen flex items-center px-4 md:px-8">
       {/* Animated gradient background */}
-      <div className="absolute inset-0">
+      {/* <div className="absolute inset-0"> */}
         {/* Glowing orbs */}
-        <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-violet-600 rounded-full filter blur-[120px] opacity-20" />
+        {/* <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-violet-600 rounded-full filter blur-[120px] opacity-20" />
         <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-fuchsia-600 rounded-full filter blur-[120px] opacity-20" />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-indigo-600 rounded-full filter blur-[150px] opacity-20" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-indigo-600 rounded-full filter blur-[150px] opacity-20" /> */}
 
         {/* Diagonal lines pattern */}
-        <div className="absolute inset-0">
+        {/* <div className="absolute inset-0">
           {[...Array(20)].map((_, i) => (
             <motion.div
               key={`h-${i}`}
@@ -51,8 +51,8 @@ export default function Hero() {
               className="absolute w-full bg-violet-500/30"
             />
           ))}
-        </div>
-      </div>
+        </div> */}
+      {/* </div> */}
 
       <div className="container mx-auto relative z-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
@@ -67,11 +67,11 @@ export default function Hero() {
               <span className="text-white">TRANSFORM YOUR</span>
               <br />
               <span className="text-white">
-                SOCIAL PRESENCE
+                BUSINESS
               </span>
             </h1>
             <p className="text-white text-lg mb-8">
-              We Help Nail Salons & Beauty Businesses Grow with Digital Marketing That Works.
+              We Help Nail Salons & Beauty Businesses Grow with Digital Solution That Works.
             </p>
           </motion.div>
 

@@ -44,23 +44,23 @@ export default function Statements() {
 
   const cards = [
     {
-      title: "AI-Powered Solutions",
-      description: "Leverage cutting-edge artificial intelligence to automate tasks, analyze data, and make smarter business decisions.",
+      title: "No Time to Waste",
+      description: "Always busy with manual tasks like booking, rescheduling appointments, and following up with customers?",
       icon: FaLaptopCode,
     },
     {
-      title: "Real-Time Analytics",
-      description: "Get instant insights into your business performance with comprehensive analytics and beautiful visualizations.",
+      title: "Dinosaur in Tech?",
+      description: "Struggling to keep up with technology? What is AI? What is automation?",
       icon: FaSearchLocation,
     },
     {
-      title: "Smart Automation",
-      description: "Streamline your workflow with intelligent automation tools that save time and reduce manual tasks.",
+      title: "Scaling Problems?",
+      description: "Getting busier but not making more money?",
       icon: FaCalendarCheck,
     },
   ];
-
-
+  
+  
   return (
     <section className="bg-white relative overflow-hidden flex items-center justify-center px-2 md:px-4 text-gray-800 py-24">
       {/* Animated gradient background */}
@@ -99,7 +99,7 @@ export default function Statements() {
       >
         <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-center mb-32 mt-32">
           <span className="bg-gradient-to-r from-[#FF69B4] to-[#FFD700] bg-clip-text text-transparent relative">
-            AMAZING FEATURES
+            IS THIS YOU ?
             <motion.div 
               className="absolute left-1/2 -bottom-4 h-0.5 w-24 bg-black rounded-full -translate-x-1/2"
               initial={{ width: 0, opacity: 0 }}
@@ -158,6 +158,22 @@ export default function Statements() {
               </div>
             </motion.div>
           ))}
+        </div>
+
+        {/* Added Image */}
+        <div className="mt-16 flex justify-center">
+          <motion.img
+            src="/isThisU.png"
+            alt="Is This You?"
+            className="max-w-xs md:max-w-sm h-auto rounded-lg"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.8,
+              ease: "easeOut",
+              delay: 0.5
+            }}
+          />
         </div>
       </motion.div>
     </section>

@@ -39,7 +39,7 @@ export default function Hero() {
                   repeat: Infinity,
                   delay: i * 0.2,
                 }}
-                style={{ 
+                style={{
                   top: `${(i + 1) * 5}%`,
                   transform: 'rotate(-45deg)',
                   transformOrigin: 'center'
@@ -53,7 +53,7 @@ export default function Hero() {
         <div className="container mx-auto relative z-10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-12">
             {/* Left side content */}
-            <motion.div 
+            <motion.div
               className="w-full md:w-1/2"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -61,20 +61,16 @@ export default function Hero() {
             >
               <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-[#FF69B4] to-[#FFD700] bg-clip-text text-transparent">
-                  TRANSFORM YOUR
-                </span>
-                <br />
-                <span className="bg-gradient-to-r from-[#FF69B4] to-[#FFD700] bg-clip-text text-transparent">
-                  SOCIAL PRESENCE
+                  WEB DESIGN
                 </span>
               </h1>
               <p className="text-gray-600 text-lg md:text-xl mb-8 leading-relaxed">
-                We Help Nail Salons & Beauty Businesses Grow with Digital Marketing That Works.
+                Cool and innovative design that attracts customers from hundreds of clicks away.
               </p>
             </motion.div>
 
             {/* Right side image */}
-            <motion.div 
+            <motion.div
               className="w-full md:w-1/2 relative"
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -103,11 +99,11 @@ export default function Hero() {
                   />
                 ))}
               </div>
-              
+
               {/* Image container */}
               <div className="relative p-6">
                 <img
-                  src={isMobile ? "/hero3ne.png" : "/hero3ne.png"}
+                  src={isMobile ? "/webdesign.png" : "/webdesign.png"}
                   alt="Hero Image"
                   className="w-full h-full object-cover rounded-2xl"
                 />
@@ -122,7 +118,7 @@ export default function Hero() {
         <div className="container mx-auto relative z-10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-12">
             {/* Left side image */}
-            <motion.div 
+            <motion.div
               className="w-full md:w-1/2 relative"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -151,7 +147,7 @@ export default function Hero() {
                   />
                 ))}
               </div>
-              
+
               <div className="relative p-6">
                 <img
                   src="/hero3ne.png"
@@ -162,7 +158,7 @@ export default function Hero() {
             </motion.div>
 
             {/* Right side content */}
-            <motion.div 
+            <motion.div
               className="w-full md:w-1/2"
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -170,15 +166,15 @@ export default function Hero() {
             >
               <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-[#A78BFA] to-[#60A5FA] bg-clip-text text-transparent">
-                  ELEVATE YOUR
+                  BOOKING
                 </span>
                 <br />
                 <span className="bg-gradient-to-r from-[#A78BFA] to-[#60A5FA] bg-clip-text text-transparent">
-                  BRAND IDENTITY
+                  SYSTEM
                 </span>
               </h1>
               <p className="text-gray-300 text-lg md:text-xl mb-8 leading-relaxed">
-                Custom Social Media Strategies Tailored for Beauty Industry Success.
+                3-click booking system that engages and retains customers fast.
               </p>
             </motion.div>
           </div>
@@ -190,7 +186,7 @@ export default function Hero() {
         <div className="container mx-auto relative z-10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-12">
             {/* Left side content */}
-            <motion.div 
+            <motion.div
               className="w-full md:w-1/2"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -198,20 +194,20 @@ export default function Hero() {
             >
               <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-[#14B8A6] to-[#F43F5E] bg-clip-text text-transparent">
-                  AMPLIFY YOUR
+                  SOCIAL MEDIA
                 </span>
                 <br />
                 <span className="bg-gradient-to-r from-[#14B8A6] to-[#F43F5E] bg-clip-text text-transparent">
-                  DIGITAL REACH
+                  MARKETING
                 </span>
               </h1>
               <p className="text-gray-700 text-lg md:text-xl mb-8 leading-relaxed">
-                Strategic Content Creation & Management for Beauty Professionals.
+                Want to go viral on TikTok, Instagram, Facebook, and Google?
               </p>
             </motion.div>
 
             {/* Right side image */}
-            <motion.div 
+            <motion.div
               className="w-full md:w-1/2 relative"
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -240,10 +236,10 @@ export default function Hero() {
                   />
                 ))}
               </div>
-              
+
               <div className="relative p-6">
                 <img
-                  src="/hero3ne.png"
+                  src="/socialMarketing.png"
                   alt="Digital Marketing"
                   className="w-full h-full object-cover rounded-2xl"
                 />
