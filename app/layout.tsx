@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     // You can also specify different sizes
     apple: [
       { url: '/logo.png' },
-      { url: '/apple_pic.png', sizes: '180x180' }
+      { url: '/logo.png', sizes: '180x180' }
     ],
     shortcut: '/favicon.ico'
   },
