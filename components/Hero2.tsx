@@ -20,16 +20,16 @@ export default function Hero() {
   }, [isMobile])
 
   return (
-    <section className="bg-gradient-to-r from-[#FF69B4] to-[#FFD700] relative overflow-hidden min-h-screen flex items-center px-4 md:px-8">
+    <section className="bg-gradient-to-r from-[#FFF5E6] to-[#FFF0DB] relative overflow-hidden min-h-screen flex items-center px-4 md:px-8 py-10">
       {/* Animated gradient background */}
       {/* <div className="absolute inset-0"> */}
-        {/* Glowing orbs */}
-        {/* <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-violet-600 rounded-full filter blur-[120px] opacity-20" />
+      {/* Glowing orbs */}
+      {/* <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-violet-600 rounded-full filter blur-[120px] opacity-20" />
         <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-fuchsia-600 rounded-full filter blur-[120px] opacity-20" />
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-indigo-600 rounded-full filter blur-[150px] opacity-20" /> */}
 
-        {/* Diagonal lines pattern */}
-        {/* <div className="absolute inset-0">
+      {/* Diagonal lines pattern */}
+      {/* <div className="absolute inset-0">
           {[...Array(20)].map((_, i) => (
             <motion.div
               key={`h-${i}`}
@@ -57,34 +57,37 @@ export default function Hero() {
       <div className="container mx-auto relative z-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Left side content */}
-          <motion.div 
+          <motion.div
             className="w-full md:w-1/2"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6">
-              <span className="text-white">TRANSFORM YOUR</span>
+              <span className="text-black">NAIL YOUR</span>
               <br />
-              <span className="text-white">
-                BUSINESS
+              <span className="text-black">
+                PERFECT STYLE
               </span>
             </h1>
-            <p className="text-white text-lg mb-8">
-              We Help Nail Salons & Beauty Businesses Grow with Digital Solution That Works.
+            <p className="text-black text-lg mb-8">
+              More than just nails, it's about style, confidence, and self-care. ✨ Get flawless designs with premium care.
             </p>
+            <button className="bg-[#FF6B35] text-white px-8 py-3 rounded-full hover:bg-opacity-90 transition-all duration-300 text-lg font-semibold">
+              Book Now
+            </button>
           </motion.div>
 
           {/* Right side image */}
-          <motion.div 
+          <motion.div
             className="w-full md:w-1/2 relative"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div >
+            <div className="rounded-[30px] overflow-hidden shadow-lg aspect-square">
               <img
-                src={isMobile ? "/hero0.png" : "/hero0.png"}
+                src={isMobile ? "/hero.jpg" : "/hero.jpg"}
                 alt="Hero Image"
                 className="w-full h-full object-cover"
               />

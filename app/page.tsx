@@ -10,6 +10,8 @@ import Footer from '@/components/Footer'
 import Testimonials from '@/components/Testimonials'
 import Contact from '@/components/contact'
 import Hero3 from '@/components/Hero3'
+import Product from '@/components/product'
+import Social from '@/components/social'
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false)
 
@@ -32,8 +34,10 @@ export default function Home() {
           {/* <Demo /> */}
           <Satements />
           <Hero3 />
-          <Contact />
-          {/* <Testimonials /> */}
+          <Product />
+          <Testimonials />
+          <Contact  />
+          {/* <Social /> */}
           {/* <Starters /> */}
         </div>
         <Footer />

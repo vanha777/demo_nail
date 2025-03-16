@@ -1,7 +1,6 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { FaAdversal, FaCalendarCheck, FaInstagram, FaLaptopCode, FaPalette, FaSearchLocation } from 'react-icons/fa'
 import { useState, useEffect } from 'react'
 
 export default function Statements() {
@@ -28,41 +27,8 @@ export default function Statements() {
     }
   }
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 50, scale: 0.8 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: {
-        type: "spring",
-        stiffness: 100,
-        damping: 10
-      }
-    }
-  }
-
-  const cards = [
-    {
-      title: "No Time to Waste",
-      description: "Always busy with manual tasks like booking, rescheduling appointments, and following up with customers?",
-      icon: FaLaptopCode,
-    },
-    {
-      title: "Dinosaur in Tech?",
-      description: "Struggling to keep up with technology? What is AI? What is automation?",
-      icon: FaSearchLocation,
-    },
-    {
-      title: "Scaling Problems?",
-      description: "Getting busier but not making more money?",
-      icon: FaCalendarCheck,
-    },
-  ];
-  
-  
   return (
-    <section className="bg-white relative overflow-hidden flex items-center justify-center px-2 md:px-4 text-gray-800 py-24">
+    <section className="bg-gradient-to-r from-[#FFF5E6] to-[#FFF0DB] relative overflow-hidden flex items-center justify-center py-24">
       {/* Animated gradient background */}
       <div className="absolute inset-0">
         {/* Diagonal lines pattern */}
@@ -92,88 +58,92 @@ export default function Statements() {
       </div>
 
       <motion.div
-        className="w-full relative z-10 px-4 md:px-8 lg:px-16"
+        className="w-full relative z-10"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
-        <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-center mb-32 mt-32">
-          <span className="bg-gradient-to-r from-[#FF69B4] to-[#FFD700] bg-clip-text text-transparent relative">
-            IS THIS YOU ?
-            <motion.div 
-              className="absolute left-1/2 -bottom-4 h-0.5 w-24 bg-black rounded-full -translate-x-1/2"
+        <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-center mb-8">
+          <span className="text-black relative">
+            WHY CHOOSE US?
+            <motion.div
+              className="absolute left-1/2 -bottom-4 h-0.5 w-24 bg-[#FF6B35] rounded-full -translate-x-1/2"
               initial={{ width: 0, opacity: 0 }}
               animate={{ width: 96, opacity: 1 }}
-              transition={{ 
-                duration: 0.8, 
-                ease: "easeOut",
-                delay: 0.2
-              }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             />
           </span>
         </h1>
-        <div className={`grid ${isMobile ? 'grid-cols-1 gap-6' : 'grid-cols-3 gap-8'} w-full max-w-6xl mx-auto`}>
-          {cards.map((card, index) => (
-            <motion.div
-              key={index}
-              variants={itemVariants}
-              className="flex flex-col gap-8 bg-white/80 backdrop-blur-lg rounded-xl p-10 border-2 border-pink-200 hover:border-pink-300 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1"
-            >
-              <div className="relative pt-4">
-                {/* Sparkles */}
-                {[...Array(8)].map((_, i) => (
-                  <motion.div
-                    key={`sparkle-${i}`}
-                    className="absolute w-1.5 h-1.5 bg-gradient-to-r from-pink-300 to-yellow-300 rounded-full"
-                    style={{
-                      left: `${50 + 40 * Math.cos(i * Math.PI / 4)}%`,
-                      top: `${50 + 40 * Math.sin(i * Math.PI / 4)}%`,
-                    }}
-                    animate={{
-                      scale: [0, 1, 0],
-                      opacity: [0, 1, 0],
-                    }}
-                    transition={{
-                      duration: 1.5,
-                      repeat: Infinity,
-                      delay: i * 0.15,
-                      ease: "easeInOut"
-                    }}
-                  />
-                ))}
 
-                {/* Icon container */}
-                <div className="flex justify-center items-center w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-pink-100 to-yellow-100 shadow-inner hover:scale-105 transition-transform duration-300">
-                  <card.icon className="w-16 h-16 text-pink-500 drop-shadow-md" />
-                </div>
-              </div>
+        {/* Added description text */}
+        <motion.p
+          className="text-center max-w-3xl mx-auto text-lg md:text-xl text-gray-700 mb-8 leading-relaxed"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+        >
+          With a 90% customer retention rate, our clients love us because we take pride in our work. We proudly use 100% premium, non-toxic products for long-lasting beauty. Because you deserve the best!
+        </motion.p>
 
-              <div className="text-left px-2 pb-4">
-                <h2 className="text-2xl md:text-3xl font-bold mb-4 bg-gradient-to-r from-[#FF69B4] to-[#FFD700] bg-clip-text text-transparent">
-                  {card.title}
-                </h2>
-                <p className="text-sm md:text-base text-gray-600 leading-relaxed">
-                  {card.description}
-                </p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+        {/* Updated CTA Button with new color */}
+        <motion.div
+          className="flex justify-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          <a
+            href="#contact"
+            className="bg-[#FF6B35] text-white px-8 py-4 rounded-full text-lg md:text-xl font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl hover:bg-[#ff8255]"
+          >
+            Don't know where to start?
+          </a>
+        </motion.div>
 
-        {/* Added Image */}
-        <div className="mt-16 flex justify-center">
-          <motion.img
-            src="/isThisU.png"
-            alt="Is This You?"
-            className="max-w-xs md:max-w-sm h-auto rounded-lg"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.8,
-              ease: "easeOut",
-              delay: 0.5
-            }}
-          />
+        {/* Images section with two equal subsections */}
+        <div className="flex justify-center items-stretch flex-col md:flex-row">
+          {/* Left subsection */}
+          <div className="flex-1 flex items-center justify-center">
+            <motion.img
+              src="/statement1.jpg"
+              alt="Is This You?"
+              className="w-80 h-80 md:w-[700px] md:h-[700px] rounded-full object-cover shadow-xl"
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{
+                duration: 0.8,
+                ease: "easeOut",
+                delay: 0.5
+              }}
+            />
+          </div>
+
+          {/* Right subsection */}
+          <div className="flex-1 flex items-center justify-center">
+            <motion.img
+              src="/statement2.jpg"
+              alt="Another perspective"
+              className="w-48 md:w-72 h-auto rounded-[90px]"
+              style={{
+                clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+                height: "700px",
+                objectFit: "cover",
+                transform: "rotate(-15deg)",
+                transformOrigin: "center"
+              }}
+              initial={{ opacity: 0, x: 50 }}
+              animate={{
+                opacity: 1,
+                x: 0,
+                rotate: 15
+              }}
+              transition={{
+                duration: 0.8,
+                ease: "easeOut",
+                delay: 0.7
+              }}
+            />
+          </div>
         </div>
       </motion.div>
     </section>

@@ -12,7 +12,7 @@ export default function Testimonials() {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768)
     }
-    
+
     checkMobile()
     window.addEventListener('resize', checkMobile)
     return () => window.removeEventListener('resize', checkMobile)
@@ -23,7 +23,7 @@ export default function Testimonials() {
     const interval = setInterval(() => {
       setActiveTestimonial((prev) => (prev + 1) % testimonials.length)
     }, 8000)
-    
+
     return () => clearInterval(interval)
   }, [])
 
@@ -73,26 +73,17 @@ export default function Testimonials() {
   }
 
   return (
-    <section className="py-20 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 relative overflow-hidden">
-      {/* Background elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-violet-400 rounded-full filter blur-[120px] opacity-20" />
-        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-fuchsia-400 rounded-full filter blur-[120px] opacity-20" />
-      </div>
-      
+    <section className="py-20 bg-gradient-to-r from-[#FFF5E6] to-[#FFF0DB] relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-left mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-[#FF69B4] to-[#FFD700] bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-black">
             What Our Clients Say
           </h2>
-          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            Don't just take our word for it. Here's what businesses like yours have achieved with our help.
-          </p>
         </motion.div>
 
         <motion.div
@@ -103,36 +94,33 @@ export default function Testimonials() {
         >
           {/* Desktop Testimonial Carousel */}
           <div className="hidden md:block">
-            <div className="relative bg-white/80 backdrop-blur-lg rounded-2xl shadow-xl p-8 border border-pink-100">
-              <div className="absolute -top-6 -left-6 text-7xl text-pink-300 opacity-50">"</div>
-              <div className="absolute -bottom-6 -right-6 text-7xl text-pink-300 opacity-50">"</div>
-              
+            <div className="relative bg-white rounded-3xl shadow-md p-8">
               <div className="flex items-center gap-8">
-                <motion.div 
+                <motion.div
                   key={`image-${activeTestimonial}`}
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.8 }}
                   transition={{ duration: 0.5 }}
-                  className="w-40 h-40 rounded-full overflow-hidden flex-shrink-0 border-4 border-pink-200 shadow-lg"
+                  className="w-40 h-40 rounded-full overflow-hidden flex-shrink-0 border-4 border-[#FF6B35]/20 shadow-lg"
                 >
-                  <div className="w-full h-full bg-gradient-to-br from-pink-300 to-purple-300 flex items-center justify-center text-white text-4xl font-bold">
+                  <div className="w-full h-full bg-[#FF6B35] flex items-center justify-center text-white text-4xl font-bold">
                     {testimonials[activeTestimonial].name.charAt(0)}
                   </div>
                 </motion.div>
-                
+
                 <div className="flex-1">
-                  <motion.p 
+                  <motion.p
                     key={`quote-${activeTestimonial}`}
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -20 }}
                     transition={{ duration: 0.5 }}
-                    className="text-xl italic text-gray-700 mb-6"
+                    className="text-xl text-black/80 mb-6"
                   >
-                    {testimonials[activeTestimonial].quote}
+                    "{testimonials[activeTestimonial].quote}"
                   </motion.p>
-                  
+
                   <motion.div
                     key={`info-${activeTestimonial}`}
                     initial={{ opacity: 0, y: 10 }}
@@ -140,30 +128,29 @@ export default function Testimonials() {
                     exit={{ opacity: 0, y: 10 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
                   >
-                    <h4 className="text-xl font-bold text-gray-900">{testimonials[activeTestimonial].name}</h4>
-                    <p className="text-pink-500">{testimonials[activeTestimonial].role}</p>
+                    <h4 className="text-xl font-bold text-black">{testimonials[activeTestimonial].name}</h4>
+                    <p className="text-[#FF6B35]">{testimonials[activeTestimonial].role}</p>
                   </motion.div>
                 </div>
               </div>
-              
+
               {/* Navigation dots */}
               <div className="flex justify-center mt-8 gap-2">
                 {testimonials.map((_, index) => (
                   <button
                     key={index}
                     onClick={() => setActiveTestimonial(index)}
-                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                      activeTestimonial === index 
-                        ? 'bg-pink-500 w-8' 
-                        : 'bg-gray-300 hover:bg-pink-300'
-                    }`}
+                    className={`w-3 h-3 rounded-full transition-all duration-300 ${activeTestimonial === index
+                        ? 'bg-[#FF6B35] w-8'
+                        : 'bg-gray-300 hover:bg-[#FF6B35]/50'
+                      }`}
                     aria-label={`View testimonial ${index + 1}`}
                   />
                 ))}
               </div>
             </div>
           </div>
-          
+
           {/* Mobile Testimonial Cards */}
           <div className="md:hidden">
             <motion.div
@@ -172,34 +159,33 @@ export default function Testimonials() {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.5 }}
-              className="bg-white/80 backdrop-blur-lg rounded-xl shadow-lg p-6 border border-pink-100"
+              className="bg-white rounded-3xl shadow-md p-6"
             >
-              <div className="w-20 h-20 mx-auto rounded-full overflow-hidden border-4 border-pink-200 mb-4">
-                <div className="w-full h-full bg-gradient-to-br from-pink-300 to-purple-300 flex items-center justify-center text-white text-2xl font-bold">
+              <div className="w-20 h-20 mx-auto rounded-full overflow-hidden border-4 border-[#FF6B35]/20 mb-4">
+                <div className="w-full h-full bg-[#FF6B35] flex items-center justify-center text-white text-2xl font-bold">
                   {testimonials[activeTestimonial].name.charAt(0)}
                 </div>
               </div>
-              
-              <p className="text-lg italic text-gray-700 mb-4 text-center">
+
+              <p className="text-lg text-black/80 mb-4 text-center">
                 "{testimonials[activeTestimonial].quote}"
               </p>
-              
+
               <div className="text-center">
-                <h4 className="text-lg font-bold text-gray-900">{testimonials[activeTestimonial].name}</h4>
-                <p className="text-pink-500">{testimonials[activeTestimonial].role}</p>
+                <h4 className="text-lg font-bold text-black">{testimonials[activeTestimonial].name}</h4>
+                <p className="text-[#FF6B35]">{testimonials[activeTestimonial].role}</p>
               </div>
-              
+
               {/* Navigation dots */}
               <div className="flex justify-center mt-6 gap-2">
                 {testimonials.map((_, index) => (
                   <button
                     key={index}
                     onClick={() => setActiveTestimonial(index)}
-                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                      activeTestimonial === index 
-                        ? 'bg-pink-500 w-6' 
-                        : 'bg-gray-300 hover:bg-pink-300'
-                    }`}
+                    className={`w-2 h-2 rounded-full transition-all duration-300 ${activeTestimonial === index
+                        ? 'bg-[#FF6B35] w-6'
+                        : 'bg-gray-300 hover:bg-[#FF6B35]/50'
+                      }`}
                     aria-label={`View testimonial ${index + 1}`}
                   />
                 ))}
