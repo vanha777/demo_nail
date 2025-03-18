@@ -96,7 +96,7 @@ export default function Statements() {
             href="#contact"
             className="bg-[#FF6B35] text-white px-8 py-4 rounded-full text-lg md:text-xl font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl hover:bg-[#ff8255]"
           >
-            Don't know where to start?
+            Book Appointment
           </a>
         </motion.div>
 

@@ -85,7 +85,7 @@ export default function Footer() {
               href="/#contact"
               className="inline-block bg-[#FF6B35] text-white px-8 py-3 rounded-full hover:bg-opacity-90 transition-all duration-300 text-lg font-semibold"
             >
-              Let's Chat
+              Book Appointment
             </Link>
           </motion.div>
         </div>
