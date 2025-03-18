@@ -93,10 +93,10 @@ export default function Statements() {
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <a
-            href="#contact"
+            href="/about"
             className="bg-[#FF6B35] text-white px-8 py-4 rounded-full text-lg md:text-xl font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl hover:bg-[#ff8255]"
           >
-            Book Appointment
+            Our Story
           </a>
         </motion.div>
 

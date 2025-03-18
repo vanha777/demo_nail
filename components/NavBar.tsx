@@ -28,13 +28,13 @@ export default function NavBar() {
                         <Link href="/" className="text-black hover:text-[#FF6B35] transition-colors font-medium">
                             Home
                         </Link>
-                        <Link href="/#services" className="text-black hover:text-[#FF6B35] transition-colors font-medium">
-                            Services
+                        <Link href="/about" className="text-black hover:text-[#FF6B35] transition-colors font-medium">
+                            About
                         </Link>
-                        <Link href="/#products" className="text-black hover:text-[#FF6B35] transition-colors font-medium">
-                            Products
+                        <Link href="/pricing" className="text-black hover:text-[#FF6B35] transition-colors font-medium">
+                            Pricing
                         </Link>
-                        <Link href="/#contact" className="text-black hover:text-[#FF6B35] transition-colors font-medium">
+                        <Link href="/#location" className="text-black hover:text-[#FF6B35] transition-colors font-medium">
                             Contact
                         </Link>
                     </div>
@@ -46,7 +46,7 @@ export default function NavBar() {
                             rel="noopener noreferrer"
                             className="bg-[#FF6B35] text-white px-6 py-2 rounded-lg font-medium hover:opacity-90 transition-opacity shadow-md hover:shadow-lg"
                         >
-                            Let's Chat
+                            Book Now
                         </Link>
                     </div>
                 </div>

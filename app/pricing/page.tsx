@@ -12,7 +12,9 @@ import Contact from '@/components/contact'
 import Hero3 from '@/components/Hero3'
 import Product from '@/components/product'
 import Social from '@/components/social'
-export default function Home() {
+import PricingHero from './components/pricing'
+
+export default function Pricing() {
   const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
@@ -30,14 +32,14 @@ export default function Home() {
       <main className="bg-transparent min-h-screen relative">
         <NavBar />
         <div className="flex flex-col">
-          <Hero2 />
+          {/* <Hero2 /> */}
           {/* <Demo /> */}
-          <Satements />
-          <Hero3 />
+          {/* <Satements /> */}
+          {/* <Testimonials /> */}
+          <PricingHero />
           {/* <Product /> */}
-          <Testimonials />
-          <Contact  />
-          <Social />
+          {/* <Contact  />
+          <Social /> */}
           {/* <Starters /> */}
         </div>
         <Footer />

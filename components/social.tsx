@@ -37,7 +37,7 @@ const OpeningHours = () => {
   };
 
   return (
-    <section className="relative overflow-hidden py-24 bg-gradient-to-r from-[#FFF5E6] to-[#FFF0DB]">
+    <section id="location" className="relative overflow-hidden py-24 bg-gradient-to-r from-[#FFF5E6] to-[#FFF0DB]">
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col md:flex-row gap-8 max-w-7xl mx-auto">
           {/* Left Side - Visit Us */}
