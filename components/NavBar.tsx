@@ -42,7 +42,7 @@ export default function NavBar() {
                     {/* CTA Button */}
                     <div>
                         <Link
-                            href="/#contact"
+                            href="https://colaunch-it.vercel.app/booking"
                             rel="noopener noreferrer"
                             className="bg-[#FF6B35] text-white px-6 py-2 rounded-lg font-medium hover:opacity-90 transition-opacity shadow-md hover:shadow-lg"
                         >

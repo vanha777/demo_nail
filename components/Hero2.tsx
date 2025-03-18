@@ -73,7 +73,9 @@ export default function Hero() {
             <p className="text-black text-lg mb-8">
               More than just nails, it's about style, confidence, and self-care. ✨ Get flawless designs with premium care.
             </p>
-            <button className="bg-[#FF6B35] text-white px-8 py-3 rounded-full hover:bg-opacity-90 transition-all duration-300 text-lg font-semibold">
+            <button
+              onClick={() => window.open("https://colaunch-it.vercel.app/booking", "_blank")}
+              className="bg-[#FF6B35] text-white px-8 py-3 rounded-full hover:bg-opacity-90 transition-all duration-300 text-lg font-semibold">
               Book Now
             </button>
           </motion.div>

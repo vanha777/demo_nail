@@ -55,7 +55,7 @@ const OpeningHours = () => {
                 Experience luxury nail care in a welcoming atmosphere. We're conveniently located in the heart of Hawthorn.
               </p>
               <motion.a
-                href="https://calendly.com/sofiang2407/30min"
+                href="https://colaunch-it.vercel.app/booking"
                 className="inline-flex items-center space-x-2 bg-[#FF6B35] text-white px-6 py-3 rounded-full shadow-lg hover:bg-opacity-90 transition-all duration-300"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

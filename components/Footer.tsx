@@ -82,7 +82,7 @@ export default function Footer() {
             transition={{ duration: 0.5 }}
           >
             <Link
-              href="/#contact"
+              href="https://colaunch-it.vercel.app/booking"
               className="inline-block bg-[#FF6B35] text-white px-8 py-3 rounded-full hover:bg-opacity-90 transition-all duration-300 text-lg font-semibold"
             >
               Book Appointment

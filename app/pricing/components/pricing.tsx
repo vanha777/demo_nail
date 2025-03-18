@@ -177,7 +177,7 @@ export default function PricingHero() {
                 </div>
 
                 <a
-                  href="https://calendly.com/sofiang2407/30min"
+                  href="https://colaunch-it.vercel.app/booking"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block bg-[#FF6B35] text-white px-8 py-3 rounded-full hover:bg-opacity-90 transition-all duration-300 text-lg font-semibold"
