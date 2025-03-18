@@ -1,16 +1,28 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FiMail, FiMapPin, FiInstagram, FiFacebook } from 'react-icons/fi';
-import { SiTiktok } from 'react-icons/si';
+import { FiClock, FiMapPin, FiCalendar } from 'react-icons/fi';
 
-const Social = () => {
+const OpeningHours = () => {
+  // Get current day (0 = Sunday, 1 = Monday, etc.)
+  const currentDay = new Date().getDay();
+
+  const businessHours = [
+    { day: 'Sunday', hours: '10:00 AM - 6:00 PM', isOpen: true },
+    { day: 'Monday', hours: '9:00 AM - 7:00 PM', isOpen: true },
+    { day: 'Tuesday', hours: '9:00 AM - 7:00 PM', isOpen: true },
+    { day: 'Wednesday', hours: '9:00 AM - 7:00 PM', isOpen: true },
+    { day: 'Thursday', hours: '9:00 AM - 7:00 PM', isOpen: true },
+    { day: 'Friday', hours: '9:00 AM - 7:00 PM', isOpen: true },
+    { day: 'Saturday', hours: '9:00 AM - 6:00 PM', isOpen: true },
+  ];
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2
+        staggerChildren: 0.1
       }
     }
   };
@@ -24,166 +36,97 @@ const Social = () => {
     }
   };
 
-  const socialLinks = [
-    {
-      icon: <FiInstagram className="h-6 w-6" />,
-      name: 'Instagram',
-      url: 'https://www.instagram.com/sofia.socialbae',
-      hoverText: 'See our latest designs! ✨'
-    },
-    {
-      icon: <FiFacebook className="h-6 w-6" />,
-      name: 'Facebook',
-      url: 'https://www.facebook.com/sofiang2407',
-      hoverText: 'Join our community! 👋'
-    },
-    {
-      icon: <SiTiktok className="h-6 w-6" />,
-      name: 'TikTok',
-      url: 'https://www.tiktok.com/@sofia.bossbae',
-      hoverText: 'Watch our trending videos! 🎥'
-    }
-  ];
-
   return (
-    <section id="contact" className="relative overflow-hidden py-24 bg-gradient-to-r from-[#FFF5E6] to-[#FFF0DB]">
-      {/* Fun background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-          className="absolute w-full h-full"
-        >
-          {[...Array(6)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute h-24 w-24 rounded-full bg-[#FF6B35]/5"
-              initial={{ 
-                x: Math.random() * 100 - 50,
-                y: Math.random() * 100 - 50
-              }}
-              animate={{
-                x: [Math.random() * 100 - 50, Math.random() * 100 - 50],
-                y: [Math.random() * 100 - 50, Math.random() * 100 - 50]
-              }}
-              transition={{
-                duration: 10 + Math.random() * 5,
-                repeat: Infinity,
-                repeatType: "reverse"
-              }}
-            />
-          ))}
-        </motion.div>
-      </div>
-
+    <section className="relative overflow-hidden py-24 bg-gradient-to-r from-[#FFF5E6] to-[#FFF0DB]">
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-3xl mx-auto text-center mb-16">
+        <div className="flex flex-col md:flex-row gap-8 max-w-7xl mx-auto">
+          {/* Left Side - Visit Us */}
           <motion.div
-            initial={{ scale: 0.5, opacity: 0 }}
-            whileInView={{ scale: 1, opacity: 1 }}
+            className="md:w-1/3"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-black">
-              Let's Be Friends! 🎉
-              <span className="block h-1 w-24 bg-[#FF6B35] mx-auto mt-4"></span>
-            </h2>
-          </motion.div>
-          <p className="text-lg text-black/80">
-            Join our fabulous community and stay updated with the latest trends! ✨
-          </p>
-        </div>
-
-        <motion.div
-          className="max-w-2xl mx-auto bg-white/80 backdrop-blur-sm rounded-3xl shadow-md p-8"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          <motion.div className="space-y-8" variants={containerVariants}>
-            <motion.div 
-              className="flex items-start space-x-4" 
-              variants={itemVariants}
-              whileHover={{ scale: 1.02 }}
-            >
-              <div className="bg-[#FF6B35] p-3 rounded-full text-white shadow-lg">
-                <FiMail className="h-6 w-6" />
-              </div>
-              <div>
-                <h4 className="text-black font-medium">Drop Us a Line! 💌</h4>
-                <a 
-                  href="mailto:sofiang2407@gmail.com" 
-                  className="text-black/70 hover:text-[#FF6B35] transition-colors"
-                >
-                  sofiang2407@gmail.com
-                </a>
-              </div>
-            </motion.div>
-
-            <motion.div 
-              className="flex items-start space-x-4" 
-              variants={itemVariants}
-              whileHover={{ scale: 1.02 }}
-            >
-              <div className="bg-[#FF6B35] p-3 rounded-full text-white shadow-lg">
-                <FiMapPin className="h-6 w-6" />
-              </div>
-              <div>
-                <h4 className="text-black font-medium">Find Us Here! 📍</h4>
-                <p className="text-black/70">Hawthorn, Australia, VIC, 3123</p>
-              </div>
-            </motion.div>
-
-            <motion.div variants={itemVariants} className="border-t border-gray-100 pt-8">
-              <h4 className="font-medium text-black mb-6">Connect & Share! 🌟</h4>
-              <div className="flex justify-center space-x-6">
-                {socialLinks.map((link, index) => (
-                  <motion.div
-                    key={index}
-                    className="relative group"
-                    whileHover={{ scale: 1.1 }}
-                  >
-                    <a
-                      href={link.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-[#FF6B35] w-14 h-14 rounded-full flex items-center justify-center text-white shadow-lg hover:bg-opacity-90 transition-all"
-                      aria-label={link.name}
-                    >
-                      {link.icon}
-                    </a>
-                    <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      whileHover={{ opacity: 1, y: 0 }}
-                      className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 whitespace-nowrap bg-black text-white text-sm py-1 px-3 rounded-full"
-                    >
-                      {link.hoverText}
-                    </motion.div>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-
-            <motion.div
-              variants={itemVariants}
-              className="text-center pt-8 border-t border-gray-100"
-            >
-              <h4 className="font-bold text-xl mb-4 text-black">Ready for Amazing Nails? ✨</h4>
+            <div className="sticky top-24">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black">
+                Visit Us Today! ✨
+              </h2>
+              <p className="text-lg text-black/70 mb-6">
+                Experience luxury nail care in a welcoming atmosphere. We're conveniently located in the heart of Hawthorn.
+              </p>
               <motion.a
                 href="https://calendly.com/sofiang2407/30min"
-                className="inline-block bg-[#FF6B35] text-white px-8 py-3 rounded-full shadow-lg hover:bg-opacity-90 transition-all duration-300 text-lg font-semibold"
+                className="inline-flex items-center space-x-2 bg-[#FF6B35] text-white px-6 py-3 rounded-full shadow-lg hover:bg-opacity-90 transition-all duration-300"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Book Your Session! 💅
+                <FiCalendar className="h-5 w-5" />
+                <span>Book Appointment</span>
               </motion.a>
-            </motion.div>
+            </div>
           </motion.div>
-        </motion.div>
+
+          {/* Right Side - Map and Hours */}
+          <motion.div
+            className="md:w-2/3 space-y-8"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            {/* Location Card with larger map */}
+            <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-lg p-8">
+              <div className="flex items-center space-x-4 mb-6">
+                <div className="bg-[#FF6B35] p-4 rounded-full text-white shadow-lg">
+                  <FiMapPin className="h-6 w-6" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-black">Our Location</h3>
+                  <p className="text-black/70">Hawthorn, Australia, VIC, 3123</p>
+                </div>
+              </div>
+
+              <div className="aspect-[16/9] rounded-2xl overflow-hidden shadow-lg">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345256385!2d145.02237731531906!3d-37.822899979751834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad6428519f40001%3A0x2a42c5a0c6c2c0e0!2sHawthorn%20VIC%203122!5e0!3m2!1sen!2sau!4v1620147382811!5m2!1sen!2sau"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                ></iframe>
+              </div>
+            </div>
+
+            {/* Opening Hours Card */}
+            <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-lg p-8">
+              <div className="flex items-center space-x-4 mb-6">
+                <div className="bg-[#FF6B35] p-4 rounded-full text-white shadow-lg">
+                  <FiClock className="h-6 w-6" />
+                </div>
+                <h3 className="text-2xl font-bold text-black">Opening Hours</h3>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                {businessHours.map((schedule, index) => (
+                  <motion.div
+                    key={schedule.day}
+                    variants={itemVariants}
+                    className={`flex justify-between items-center p-3 rounded-lg ${currentDay === index ? 'bg-[#FF6B35]/10 shadow-sm' : ''
+                      }`}
+                  >
+                    <span className={`font-medium ${currentDay === index ? 'text-[#FF6B35]' : 'text-black'}`}>
+                      {schedule.day}
+                    </span>
+                    <span className="text-black/70">{schedule.hours}</span>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
 };
 
-export default Social;
+export default OpeningHours;

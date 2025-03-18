@@ -27,7 +27,7 @@ export default function Home() {
 
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <main className="bg-base-100 min-h-screen relative">
+      <main className="bg-transparent min-h-screen relative">
         <NavBar />
         <div className="flex flex-col">
           <Hero2 />
@@ -38,7 +38,7 @@ export default function Home() {
           <Product />
      
           <Contact  />
-          {/* <Social /> */}
+          <Social />
           {/* <Starters /> */}
         </div>
         <Footer />
