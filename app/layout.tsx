@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     url: 'https://www.glaze.com/',
     images: [
       {
-        url: 'https://tzqzzuafkobkhygtccse.supabase.co/storage/v1/object/public/biz_touch/banner.png',
+        url: 'https://vbfejmafjqgcfrzxewcd.supabase.co/storage/v1/object/public/general//Black_Simple_Creative_Agency_Logo-removebg-preview.png',
         alt: 'Glaze Nail Salon',
       },
     ],
