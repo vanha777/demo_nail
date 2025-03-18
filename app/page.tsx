@@ -33,9 +33,10 @@ export default function Home() {
           <Hero2 />
           {/* <Demo /> */}
           <Satements />
+          <Testimonials />
           <Hero3 />
           <Product />
-          <Testimonials />
+     
           <Contact  />
           {/* <Social /> */}
           {/* <Starters /> */}
