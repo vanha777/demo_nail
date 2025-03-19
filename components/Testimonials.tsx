@@ -3,10 +3,10 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import { start } from 'repl'
 
 export default function Testimonials() {
   const [isMobile, setIsMobile] = useState(false)
-  const [activeTestimonial, setActiveTestimonial] = useState(0)
 
   useEffect(() => {
     const checkMobile = () => {
@@ -18,59 +18,32 @@ export default function Testimonials() {
     return () => window.removeEventListener('resize', checkMobile)
   }, [])
 
-  // Auto-rotate testimonials
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveTestimonial((prev) => (prev + 1) % testimonials.length)
-    }, 8000)
-
-    return () => clearInterval(interval)
-  }, [])
-
   const testimonials = [
     {
       name: "Sofia Nguyen",
       role: "5-Year Loyal Client",
       image: "/customer1.jpg", // Replace with actual image path
-      quote: "I've been exclusively using Glaze's ageLOC products for 5 years now, and the results are incredible. My weekly manicures combined with their Galvanic Spa treatments have completely transformed my hands - they look 10 years younger! The staff's expertise in recommending the right products for my skin type keeps me coming back.",
+      quote: "I can't say enough good things about Glaze! The team is so friendly and welcoming. They really listen to what you want and make sure you leave happy. My nails have never looked this good!",
+      start: 5,
+      profile: "/customer1.jpg"
     },
     {
       name: "Fiano Pham",
       role: "3-Year VIP Member",
       image: "/customer2.jpg", // Replace with actual image path
-      quote: "Started with just monthly manicures, but after trying their ageLOC Boost System, I was hooked! Three years later, I'm here every two weeks for nail care and facial treatments. The Enhancer Skin Conditioning Gel has become my holy grail product - it's perfect for Houston's humid weather. The results speak for themselves!",
+      quote: "My nails usually chip within a few days, but after getting them done at Glaze, they've lasted over two weeks without any issues. I'm so impressed with the quality and attention to detail!",
+      start: 5,
+      profile: "/customer2.jpg"
     },
     {
       name: "Lisa Wong",
       role: "4-Year Regular Client",
       image: "/customer3.jpg", // Replace with actual image path
-      quote: "Four years of consistent nail care and Glaze's skincare routine have made such a difference. Their ageLOC Tru Face Essence Ultra combined with regular manicures has kept my hands looking youthful and professional. As someone who tried countless salons before, I can say their expertise in both nail care and anti-aging treatments is unmatched.",
+      quote: "I went to Glaze for the first time last week, and I'm already hooked! They took the time to understand exactly what I wanted, and the design turned out better than I could've imagined. Definitely coming back!",
+      start: 4,
+      profile: "/customer3.jpg"
     },
   ]
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.3,
-        delayChildren: 0.2
-      }
-    }
-  }
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        type: "spring",
-        stiffness: 100,
-        damping: 10
-      }
-    }
-  }
 
   return (
     <section className="py-20 bg-gradient-to-r from-[#FFF5E6] to-[#FFF0DB] relative overflow-hidden">
@@ -79,144 +52,95 @@ export default function Testimonials() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-left mb-16"
+          className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-black">
             What Our Clients Say
           </h2>
         </motion.div>
 
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          className="max-w-5xl mx-auto"
-        >
-          {/* Desktop Testimonial Carousel */}
-          <div className="hidden md:block">
-            <div className="relative bg-white rounded-3xl shadow-md p-8">
-              <div className="flex items-center gap-8">
-                <motion.div
-                  key={`image-${activeTestimonial}`}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.8 }}
-                  transition={{ duration: 0.5 }}
-                  className="w-40 h-40 rounded-full overflow-hidden flex-shrink-0 border-4 border-[#FF6B35]/20 shadow-lg"
-                >
-                  <Image 
-                    src={testimonials[activeTestimonial].image}
-                    alt={testimonials[activeTestimonial].name}
-                    width={160}
-                    height={160}
-                    className="w-full h-full object-cover"
-                    onError={(e) => {
-                      // Fallback to initial letter if image fails to load
-                      const target = e.target as HTMLElement;
-                      target.style.display = 'none';
-                      target.parentElement!.innerHTML = `<div class="w-full h-full bg-[#FF6B35] flex items-center justify-center text-white text-4xl font-bold">
-                        ${testimonials[activeTestimonial].name.charAt(0)}
-                      </div>`;
-                    }}
-                  />
-                </motion.div>
-
-                <div className="flex-1">
-                  <motion.p
-                    key={`quote-${activeTestimonial}`}
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -20 }}
-                    transition={{ duration: 0.5 }}
-                    className="text-xl text-black/80 mb-6"
-                  >
-                    "{testimonials[activeTestimonial].quote}"
-                  </motion.p>
-
-                  <motion.div
-                    key={`info-${activeTestimonial}`}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
-                    transition={{ duration: 0.5, delay: 0.2 }}
-                  >
-                    <h4 className="text-xl font-bold text-black">{testimonials[activeTestimonial].name}</h4>
-                    <p className="text-[#FF6B35]">{testimonials[activeTestimonial].role}</p>
-                  </motion.div>
-                </div>
-              </div>
-
-              {/* Navigation dots */}
-              <div className="flex justify-center mt-8 gap-2">
-                {testimonials.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setActiveTestimonial(index)}
-                    className={`w-3 h-3 rounded-full transition-all duration-300 ${activeTestimonial === index
-                        ? 'bg-[#FF6B35] w-8'
-                        : 'bg-gray-300 hover:bg-[#FF6B35]/50'
-                      }`}
-                    aria-label={`View testimonial ${index + 1}`}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Mobile Testimonial Cards */}
-          <div className="md:hidden">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          {testimonials.map((testimonial, index) => (
             <motion.div
-              key={`mobile-${activeTestimonial}`}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.9 }}
-              transition={{ duration: 0.5 }}
-              className="bg-white rounded-3xl shadow-md p-6"
+              key={testimonial.name}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="relative h-[600px] rounded-3xl overflow-hidden shadow-md hover:shadow-lg transition-shadow"
             >
-              <div className="w-20 h-20 mx-auto rounded-full overflow-hidden border-4 border-[#FF6B35]/20 mb-4">
-                <Image 
-                  src={testimonials[activeTestimonial].image}
-                  alt={testimonials[activeTestimonial].name}
-                  width={80}
-                  height={80}
-                  className="w-full h-full object-cover"
+              {/* Background Image */}
+              <div className="absolute inset-0">
+                <Image
+                  src={testimonial.image}
+                  alt={testimonial.name}
+                  fill
+                  className="object-cover"
                   onError={(e) => {
-                    // Fallback to initial letter if image fails to load
                     const target = e.target as HTMLElement;
                     target.style.display = 'none';
-                    target.parentElement!.innerHTML = `<div class="w-full h-full bg-[#FF6B35] flex items-center justify-center text-white text-2xl font-bold">
-                      ${testimonials[activeTestimonial].name.charAt(0)}
+                    target.parentElement!.innerHTML = `<div class="w-full h-full bg-[#FF6B35] flex items-center justify-center text-white text-6xl font-bold">
+                      ${testimonial.name.charAt(0)}
                     </div>`;
                   }}
                 />
+                {/* Dark overlay gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-black/20" />
               </div>
 
-              <p className="text-lg text-black/80 mb-4 text-center">
-                "{testimonials[activeTestimonial].quote}"
-              </p>
+              {/* Content Overlay */}
+              <div className="absolute bottom-0 px-3">
+                <div className="bg-white rounded-t-3xl p-6 relative">
+                  {/* Profile Image */}
+                  <div className="absolute -top-12 left-1/2 transform -translate-x-1/2">
+                    <div className="w-24 h-24 rounded-full border-4 border-white overflow-hidden relative">
+                      <Image
+                        src={testimonial.profile}
+                        alt={testimonial.name}
+                        fill
+                        className="object-cover"
+                        onError={(e) => {
+                          const target = e.target as HTMLElement;
+                          target.style.display = 'none';
+                          target.parentElement!.innerHTML = `<div class="w-full h-full bg-[#FF6B35] flex items-center justify-center text-white text-2xl font-bold">
+                            ${testimonial.name.charAt(0)}
+                          </div>`;
+                        }}
+                      />
+                    </div>
+                  </div>
+                  
+                  <div className="mt-10"> {/* Add margin top to make space for profile image */}
+                    <p className="text-md text-black/80 mb-6">
+                      "{testimonial.quote}"
+                    </p>
 
-              <div className="text-center">
-                <h4 className="text-lg font-bold text-black">{testimonials[activeTestimonial].name}</h4>
-                <p className="text-[#FF6B35]">{testimonials[activeTestimonial].role}</p>
-              </div>
-
-              {/* Navigation dots */}
-              <div className="flex justify-center mt-6 gap-2">
-                {testimonials.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setActiveTestimonial(index)}
-                    className={`w-2 h-2 rounded-full transition-all duration-300 ${activeTestimonial === index
-                        ? 'bg-[#FF6B35] w-6'
-                        : 'bg-gray-300 hover:bg-[#FF6B35]/50'
-                      }`}
-                    aria-label={`View testimonial ${index + 1}`}
-                  />
-                ))}
+                    <div className="text-center">
+                      <h4 className="text-xl font-bold text-black">{testimonial.name}</h4>
+                      <p className="text-[#FF6B35] mb-2">{testimonial.role}</p>
+                      <div className="flex items-center justify-center gap-1">
+                        {[...Array(5)].map((_, i) => (
+                          <svg
+                            key={i}
+                            className={`w-5 h-5 ${i < testimonial.start
+                              ? 'text-yellow-400'
+                              : i === Math.floor(testimonial.start) && testimonial.start % 1 !== 0
+                                ? 'text-yellow-400'
+                                : 'text-gray-300'
+                              }`}
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                          >
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                          </svg>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </motion.div>
-          </div>
-        </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   )
